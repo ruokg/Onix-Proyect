@@ -488,12 +488,9 @@ body {
     align-items: center;
     overflow: hidden;     
     padding: 3px;
+    background-color: #000;
+    color: '#fff';
 }
-
-
-
-/* product_layout end */
-
 /* footer start */
 .footer {
     width: 100%;
@@ -509,6 +506,7 @@ body {
 
 /* agregar disqus */
 /* https://commentbox.io/ */
+/* 5748728119951360-proj */
 /* https://www.youtube.com/watch?v=Dr6pSdeJgkA */
 /* https://www.youtube.com/watch?v=a-V7OIi1NWw */
 /* terminar Plantilla */

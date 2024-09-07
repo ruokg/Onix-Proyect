@@ -1,9 +1,10 @@
+// ----------------------------------------------------------------slider---------------------------------------------------------------- //
 let slideIndex = 0;
 let slides = document.getElementsByClassName("mySlides");
 let dots = document.getElementsByClassName("dot");
 let slideInterval;
 
-// Función para mostrar la slide actual
+
 function showSlides(n) {
     if (n > slides.length) {
         slideIndex = 1;
@@ -25,38 +26,38 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-// Función para cambiar automáticamente las slides
+
 function autoSlides() {
     slideIndex++;
     showSlides(slideIndex);
 }
 
-// Inicializa la presentación automática
+
 function startAutoSlide() {
-    slideInterval = setInterval(autoSlides, 5000); // Cada 5 segundos
+    slideInterval = setInterval(autoSlides, 5000); 
 }
 
-// Detiene la presentación automática
+
 function stopAutoSlide() {
     clearInterval(slideInterval);
 }
 
-// Cambia manualmente a una slide específica
+
 function currentSlide(n) {
-    stopAutoSlide();  // Detener la automática al cambiar manualmente
+    stopAutoSlide(); 
     showSlides(n);
-    startAutoSlide(); // Reiniciar la automática después del cambio manual
+    startAutoSlide();
 }
 
-// Cambia manualmente a la siguiente o anterior slide
+
 function plusSlides(n) {
-    stopAutoSlide(); // Detener la automática al cambiar manualmente
+    stopAutoSlide();
     showSlides(slideIndex + n);
-    startAutoSlide(); // Reiniciar la automática después del cambio manual
+    startAutoSlide();
 }
 
-// Inicia el slideshow en el primer slide
+
 window.onload = function() {
     showSlides(1);
-    startAutoSlide(); // Inicia la rotación automática
+    startAutoSlide();
 };
